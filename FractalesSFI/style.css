@@ -1,0 +1,15 @@
+
+/* Estilos para el título */
+.header1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilos para el canvas */
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #333; /* Borde decorativo */
+}

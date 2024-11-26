@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujar Cuadrados Recursivos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow: auto;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 900px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="number"]:focus, input[type="text"]:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .function-inputs {
+            margin-top: 20px;
+        }
+
+        .function {
+            margin-bottom: 15px;
+        }
+
+        .function input {
+            width: 60px;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .function-list {
+            margin-top: 15px;
+        }
+
+        canvas {
+            width: 100%;
+            max-width: 800px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        .add-function-button {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .add-function-button:hover {
+            background-color: #218838;
+        }
+
+        .add-function-button {
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Dibujar Fractales con sistemas de Funciones iteradas con triangulos o cuadrados </h1>
+
+    <!-- Formulario de entrada para recursiones y funciones -->
+    <div class="form-section">
+        <label for="recursiones">Número de recursiones:</label>
+        <input type="number" id="recursiones" value="3" min="1" step="1">
+    </div>
+
+    <!-- Agregar selección de figura -->
+    <label>
+        Escoge una figura geometrica
+        <select class="figura" name="figura">
+          <option value="">Select One …</option>
+          <option value="cuadrado">cuadrado</option>
+          <option value="triangulo">triangulo</option>
+          
+        </select>
+    </label>
+    
+    <div class="result"></div>
+    
+      
+    
+
+
+    <div class="function-inputs">
+        <h3>Funciones de Transformación</h3>
+        <div id="functionList">
+            <div class="function">
+                <label>f: x * <input type="number" class="scaleX" value="0.5"> + <input type="number" class="offsetX" value="0">, y * <input type="number" class="scaleY" value="0.5"> + <input type="number" class="offsetY" value="0"></label>
+        </div>
+        <button class="add-function-button" onclick="agregarFuncion()">Agregar otra función</button>
+    </div>
+
+    <button class="button" onclick="iniciarDibujo()">Dibujar</button>
+    
+    <!-- Canvas donde se dibujarán los cuadrados -->
+    <canvas id="gradientCanvas" width="1000" height="1000"></canvas>
+</div>
+
+<script src="ejemplo.js"></script>
+</body>
+</html>

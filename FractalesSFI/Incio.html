@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursión de Cuadrados</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dibujar Cuadrados Recursivos</h1>
+
+    <!-- Campo de entrada para el número de recursiones -->
+    <label for="recursiones">Número de recursiones:</label>
+    <input type="number" id="recursiones" value="3" min="1" step="1">
+    
+    <!-- Botón para iniciar el dibujo -->
+    <button onclick="iniciarDibujo()">Dibujar</button>
+    
+    <!-- Canvas donde se dibujarán los cuadrados -->
+    <canvas id="gradientCanvas" width="1000" height="1000"></canvas>
+
+    <script src="funciones.js"></script>
+</body>
+</html>
+
